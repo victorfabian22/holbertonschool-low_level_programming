@@ -1,12 +1,12 @@
 /*
- * File: 1-last_digit.c
+ * File: 2-print_alphabet.c
  * Auth: Romero Arango Victor
  */
 
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * main - Write a program that prints the alphabet in lowercase, followed by a new line.
+ * main - Prints the alphabet in lowercase.
  *
  * Return: Always 0.
  */
@@ -16,10 +16,8 @@ int main(void)
 
 	for (letter = 'a'; letter <= 'z'; letter++)
 		putchar(letter);
-	putchar(letter);
 
 	putchar('\n');
 
 	return (0);
-
 }
