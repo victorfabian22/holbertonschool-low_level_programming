@@ -1,6 +1,6 @@
 /*
  * File: 9-print_comb.c
- * Auth: Romero Arango Victor F
+ * Auth: Romero Arango Victor
  */
 
 #include <stdio.h>
@@ -27,4 +27,4 @@ int main(void)
 	putchar('\n');
 
 	return (0);
-}i
+}
