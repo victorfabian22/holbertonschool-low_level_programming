@@ -1,12 +1,12 @@
 /*
  * File: 9-print_comb.c
- * Auth: Romero Arango victor
+ * Auth: Romero Arango victor 
  */
 
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of single-digit numbers.
+ * main - Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.
  *
  * Return: Always 0.
  */
@@ -28,4 +28,3 @@ int main(void)
 
 	return (0);
 }
-
