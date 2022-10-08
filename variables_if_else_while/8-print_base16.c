@@ -1,12 +1,12 @@
 /*
  * File: 8-print_base16.c
- * Auth: Romero Arango victor
+ * Auth: Romero Arango Victor F
  */
 
 #include <stdio.h>
 
 /**
- * main - Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.
+ * main - Prints all the numbers of base 16 in lowercase.
  *
  * Return: Always 0.
  */
