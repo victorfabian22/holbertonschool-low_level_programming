@@ -1,8 +1,7 @@
 /*
- * File: 9-print_combb.c:22:
+ * File: 9-print_combb.
  * Auth: Romero Arango Victor
  */
-
 #include <stdio.h>
 
 /**
