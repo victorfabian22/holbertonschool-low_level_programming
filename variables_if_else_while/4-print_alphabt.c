@@ -1,12 +1,12 @@
 /*
  * File: 4-print_alphabt.c
- * Auth: Romero Arango vicotr
+ * Auth: Romero Arango Victor
  */
 
 #include <stdio.h>
 
 /**
- * main - Write a program that prints the alphabet in lowercase, followed by a new line.
+ * main - Prints the alphabet in lowercase, except for q and e.
  *
  * Return: Always 0.
  */
