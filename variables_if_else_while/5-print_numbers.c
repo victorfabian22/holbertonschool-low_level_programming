@@ -1,23 +1,23 @@
 /*
- * File: 3-print_alphabets.c
- * Auth: Romero Arango Victor
+ * File: 5-print_numbers.c
+ * Auth: Romero Arango Vicotr
  */
 
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet in lowercase, and then in uppercase.
+ * main - Prints all single digit numbers of base 10 starting from 0.
  *
  * Return: Always 0.
  */
 int main(void)
 {
 	int num;
-	
+
 	for (num = 0; num < 10; num++)
-	       printf("%d" , num);
+		printf("%d", num);
 
-printf("\");
+	printf("\n");
 
-return (0);
+	return (0);
 }
