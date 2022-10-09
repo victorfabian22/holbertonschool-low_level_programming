@@ -1,30 +1,27 @@
-/*
- * File: 9-print_comb.c
- * Auth: Romero Arango victor F
- */
-
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of single-digit numbers.
+ * main - print numbers
  *
- * Return: Always 0.
+ * Description: Print numbers from 0 to 9
+ * separated with , and space followed by a new line
+ * Return: Always return 0
  */
+
 int main(void)
 {
-	int num;
 
-	for (num = 0; num <= 9; num++)
+	int c;
+
+	for (c = 48; c <= 57; c++)
 	{
-		putchar((num % 10) + '0');
-		if (num == 9)
-			continue;
-		
+	putchar(c);
+		if (c != 57)
+		{
 		putchar(',');
 		putchar(' ');
+		}
 	}
-
-	putchar('\n');
-
+	putchar ('\n');
 	return (0);
 }
