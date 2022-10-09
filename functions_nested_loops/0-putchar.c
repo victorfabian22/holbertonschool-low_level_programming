@@ -1,12 +1,8 @@
 #include "main.h"
-
 /**
- * main - 0-putchar.c
- *
- * Description: Print _putchar followed by a newline
- * Return: Always return 0
+ * main - Print '_putchar' character by character.
+ * Return: Return 0 when done.
  */
-
 int main(void)
 {
 	_putchar('_');
