@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _puts - print a string
+ * _puts - prints a string
  * @str: string
  *
- * Retunr: lenght of the string
+ * Return: length of the string
  */
-void _outs(char *str)
+void _puts(char *str)
 {
 	int i = *str++;
 
