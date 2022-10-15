@@ -3,7 +3,6 @@
 
 /**
  * print_diagsums - Write a function that prints the sum of the two diagonals of a square matrix of integers.
- * of a square matrix of integers
  * @a: square matrix of which we print the sum of diagonals
  * @size: size of the matrix
  */
