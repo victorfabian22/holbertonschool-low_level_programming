@@ -1,7 +1,7 @@
-include "main.h"
+#include "main.h"
 
 /**
- * _strcmp - Write a function that compares two strings.
+ * _strcmp - compares two strings
 i* @s1: string 1
  * @s2: string 2
  *
