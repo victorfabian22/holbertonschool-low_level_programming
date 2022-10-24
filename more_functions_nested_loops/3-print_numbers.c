@@ -1,24 +1,24 @@
 #include "main.h"
 
 /**
- * print_numbers - print numbers
+ * more_numbers - print numbers
  *
- * Description: Print numbers followed by a newline
- * Return: void
+ * Description: Print numbers from 0 to 14 followed by a newline
+ * Return: Always return 0
  */
 
-void print_numbers(void)
+void more_numbers(void)
 {
-	int a;
+	int a, b;
 
-	a = 48;
-
-	while (a <= 57)
+	for (b = 0; b <= 9; b++)
 	{
-
-		_putchar(a);
-
-		a++;
+		for (a = 0; a <= 14; a++)
+		{
+			if (a > 9)
+				_putchar((a / 10) + '0');
+			_putchar((a % 10) + '0');
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
