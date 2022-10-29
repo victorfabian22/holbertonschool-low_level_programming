@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * *0-malloc_checked.c - Write a function that allocates memory using malloc.
- * @b: Unsigned int that needs to be allocated.
- * Return: Allocated
+ * *malloc_checked - Write a function that allocates memory using malloc.
+ * @b:               Unsigned int that needs to be allocated.
+ * Return:           A pointer to the allocated memory.
  */
 
 void *malloc_checked(unsigned int b)
@@ -17,4 +17,3 @@ void *malloc_checked(unsigned int b)
 		exit(98);
 	return (allocate);
 }
-
