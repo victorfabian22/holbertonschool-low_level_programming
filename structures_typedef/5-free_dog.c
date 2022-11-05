@@ -2,15 +2,16 @@
 #include "dog.h"
 
 /**
-* free_dog - Frees dogs
-* @d: Dog being freed
+ * free_dog - function to free structures
+ * Return: void
+ * @d: structure
 */
 void free_dog(dog_t *d)
 {
-if (d)
-{
-free(d->owner);
-free(d->name);
-free(d);
-}
+	if (d)
+	{
+		free(d->name);
+		free(d->owner);
+		free(d);
+	}
 }
