@@ -1,12 +1,13 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
+
 
 /**
- * free_dog - Write a function that frees dogs.
- * @d: pointer to dog to free
- *
- * Return: void
+ * free_dog - frees a dog object
+ * @d: dog to be freed
  */
+
+
 void free_dog(dog_t *d)
 {
 	if (d)
