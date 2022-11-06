@@ -1,18 +1,17 @@
-#include <stdlib.h>
 #include "dog.h"
-
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 /**
- * free_dog - Set the  dogs free (let the dogs out :v)
- * @d: ptr dog to free
- * Description: if ptr exist frees struct in order first members then ptr
- * Return: void
+ * free_dog - Entry point
+ * @d: dog structure
+ * Return: Always 0.
  */
 void free_dog(dog_t *d)
 {
-	if (d)
-	{
-		free(d->name);
-		free(d->owner);
-		free(d);
-	}
+	if (!d)
+		return;
+	free(d->name);
+	free(d->owner);
+	free(d);
 }
