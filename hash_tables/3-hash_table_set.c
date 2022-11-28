@@ -1,51 +1,43 @@
 #include "hash_tables.h"
+
 /**
- * hash_table_set - function that adds an element to hash table
- * @ht: hash table to update
- * @key: key
- * @value: value of key
- * Return: updated table
+ *hash_table_set - adds an element to the hash table
+ *@ht: hash table that is to be updated
+ *@key: the key
+ *@value: value associated with key
+ *Return: 1 on success. 0 if failed
  */
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int idxn = 0;
-	char *t_val = NULL;
-	hash_node_t *temp = NULL;
-	hash_node_t *new = NULL;
+	hash_node_t *new_item;
+	unsigned long int h_index;
+	unsigned long int i;
 
-	if (ht == NULL || ht->array == NULL || value == NULL)
-		return (0);
-
-	if (strlen(key) == 0 || key == NULL)
-		return (0);
-	t_val = strdup(value);
-	if (t_val == NULL)
-		return (0);
-	idxn = key_index((unsigned char *)key, ht->size);
-	/* Collision checker */
-	temp = ht->array[idxn];
-	while (temp)
+	if (key == NULL || ht == NULL || value == NULL)
 	{
-		if (strcmp(temp->key, key) == 0)
+		return (0);
+	}
+	h_index = key_index((const unsigned char *)key, ht->size);
+	i = h_index;
+	while (ht->array[i] != NULL)
+	{
+		if (strcmp(ht->array[i]->key, key) == 0)
 		{
-			free(temp->value);
-			temp->value = t_val;
-			temp->value = strdup(value);
-			free(t_val);
+			free(ht->array[i]->value);
+			ht->array[i]->value = strdup(value);
 			return (1);
 		}
-		temp = temp->next;
+		i = i + 1;
 	}
-	/* If no collision, insert node */
-	new = malloc(sizeof(hash_node_t));
-	if (new == NULL)
+	new_item = malloc(sizeof(*new_item));
+	if (new_item == NULL)
 	{
-		free(new);
 		return (0);
 	}
-	new->key = strdup(key);
-	new->value = t_val;
-	new->next = ht->array[idxn];
-	ht->array[idxn] = new;
+	new_item->key = strdup(key);
+	new_item->value = strdup(value);
+	new_item->next = ht->array[h_index];
+	ht->array[h_index] = new_item;
 	return (1);
 }
