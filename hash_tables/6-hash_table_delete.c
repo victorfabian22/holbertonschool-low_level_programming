@@ -1,43 +1,30 @@
 #include "hash_tables.h"
 
 /**
- * freeRecursively - Function that frees nodes of a hash table.
- * @hTableToDelete:  Node of hash table to free recursively.
- * Return:           Void.
+ * hash_table_delete - Delete the hash table.
+ * @ht: Hash table.
+ *
+ * Return: Void.
  */
-
-void freeRecursively(hash_node_t *hTableToDelete)
-{
-	if (!hTableToDelete)
-		return;
-	freeRecursively(hTableToDelete->next);
-	free(hTableToDelete->value);
-	free(hTableToDelete->key);
-	free(hTableToDelete);
-}
-
-/**
-* hash_table_delete - Function that deletes a hash table.
-* @ht:                Hash table to delete.
-* Return:             Void.
-*/
-
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_node_t *deleteHash = NULL;
-	unsigned long int index = 0;
+	unsigned long int i;
+	hash_node_t *current;
 
-	if (ht)
+	for (i = 0; i < ht->size; i++)
 	{
-		for (; index < ht->size; index++)
+		if (ht->array[i] != NULL)
 		{
-			deleteHash = ht->array[index];
-			if (deleteHash)
-				freeRecursively(deleteHash);
+			while (ht->array[i] != NULL)
+			{
+				current = ht->array[i]->next;
+				free(ht->array[i]->key);
+				free(ht->array[i]->value);
+				free(ht->array[i]);
+				ht->array[i] = current;
+			}
 		}
-		free(ht->array);
-		free(ht);
 	}
-	else
-		return;
+	free(ht->array);
+	free(ht);
 }
